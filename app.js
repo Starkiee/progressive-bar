@@ -26,12 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const progressBarContainer = progressBarContainers[progressBarQueue.length];
       loading = true;
 
-      // Start the loading animation
       requestAnimationFrame(() => {
         progressBarContainer.querySelector('.progress-bar').style.width = '100%';
       });
 
-      // After 3 seconds, set loading to false to allow the next bar to load
       setTimeout(() => {
         progressBarQueue.push(progressBarContainer);
         loading = false;
